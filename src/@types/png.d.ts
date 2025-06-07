@@ -1,0 +1,1 @@
+declare module '*.png'; //aceita qualquer arq que termina em .png

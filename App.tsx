@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { Loading } from '@components/Loading';
 import { StatusBar } from 'react-native';
+import { Routes } from 'src/routes';
 
 export default function App() {
 
@@ -11,11 +12,11 @@ export default function App() {
     Roboto_400Regular,
     Roboto_700Bold,
   });
-  return (
-    <ThemeProvider theme={theme}>
+  return ( //disponibiliza o tema pra toda a aplicação
+    <ThemeProvider theme={theme}> 
       <StatusBar barStyle={'light-content'}/>
 
-     {fontsLoaded? <Groups /> : <Loading /> } 
+     {fontsLoaded? <Routes /> : <Loading /> } 
     </ThemeProvider>
   );
 }
